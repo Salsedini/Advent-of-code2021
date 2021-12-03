@@ -31,7 +31,6 @@ int main()
 
     } while (!fe.eof()); 
     fe.close();
-
     int num1;
     int num0;
     char binario[11];
@@ -42,7 +41,7 @@ int main()
         num1=0;
         num0=0;
 
-        for(int j=0;j<1000;j++){
+        for(int j=0;j<1000;j++){   
 
             if(cadena[j][i]==48){
                 num0++;
@@ -51,9 +50,10 @@ int main()
                 num1++;
             }
 
+            cout << "En la posición [" << j+1 << "] ["<< i+1 << "] he leído un " << cadena[j][i] << endl;
         }
 
-        cout << "En el índice " << i << " hay " << num0 << " ceros y " << num1 << " unos" << endl;
+        
 
         if(num0>num1){
             binario[i]=48;
